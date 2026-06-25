@@ -1,5 +1,5 @@
 <div class="user-page">
-    <h4 class="text-center text-xl font-bold mt-2">
+    <h4 class="text-center text-xl font-bold mt-5">
         All users
     </h4>
 
@@ -25,7 +25,6 @@
                     <th>Username</th>
                     <th>email</th>
                     <th>Details</th>
-                    <th>Create User</th>
                 </tr>
             </ng-template>
             <ng-template #body let-utente>
@@ -35,10 +34,6 @@
                     <td>{{ utente.email }}</td>
                     <td>
                         <p-button label="View Details" (onClick)="handleUserViewDetails(utente)" />
-                    </td>
-                    
-                    <td>
-                        <p-button label="Create User" />
                     </td>
                 </tr>
             </ng-template>
