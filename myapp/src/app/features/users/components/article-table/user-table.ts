@@ -13,6 +13,7 @@ import { DialogModule } from 'primeng/dialog';
 import { UserDetails } from '../user-details/user-details';
 import { SearchUser } from '../search-user/search-user';
 import { MessageModule } from 'primeng/message';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -43,7 +44,7 @@ export class UserTable {
   notFound: boolean = false;
 
 
-  constructor(private userService: UserService, private loadingService: LoadingService) { }
+  constructor(private userService: UserService, private loadingService: LoadingService , private router: Router) { }
 
   ngOnInit() {
     this.loadingValue = this.loadingService.isLoadingObs$;
@@ -75,6 +76,10 @@ export class UserTable {
 
   closeModal() {
     this.vis = false;
+  }
+
+  navigateToUserCreationForm() {
+    this.router.navigate(['/create']);
   }
 
   private getUsers(): void {

@@ -1,5 +1,5 @@
 <div class="user-page">
-    <h4 class="text-center text-xl font-bold mt-5">
+    <h4 class="text-center text-xl font-bold mt-5 mb-5">
         All users
     </h4>
 
@@ -15,6 +15,11 @@
 
     <app-search-user [username]="username()" (usernameChange)="username.set($event)" (searchClicked)="onSearch($event)">
     </app-search-user>
+
+    <p-button 
+        label="Create user"
+        class="m-5 flex justify-center items-center"
+     />
 
 
     <div class="card m-10 flex justify-center">
