@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { DialogModule } from 'primeng/dialog';
 @Component({
   selector: 'app-usercreationform',
@@ -8,4 +8,14 @@ import { DialogModule } from 'primeng/dialog';
 })
 export class Usercreationform {
 
+  visibility = signal<boolean>(true);
+
+
+
+
+
+
+  get visible() {
+    return this.visibility();
+  }
 }
