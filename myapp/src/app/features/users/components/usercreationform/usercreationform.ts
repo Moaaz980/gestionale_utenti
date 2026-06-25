@@ -13,7 +13,9 @@ export class Usercreationform {
 
 
 
-
+  onButtonClick() {
+    this.visibility.set(false);
+  }
 
   get visible() {
     return this.visibility();
