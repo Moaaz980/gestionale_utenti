@@ -1,8 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
+
+
+
 @Component({
   selector: 'app-usercreationform',
-  imports: [DialogModule],
+  imports: [DialogModule , ButtonModule],
   templateUrl: './usercreationform.html',
   styleUrl: './usercreationform.css',
 })
